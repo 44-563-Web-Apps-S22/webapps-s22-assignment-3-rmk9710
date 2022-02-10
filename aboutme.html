@@ -7,6 +7,26 @@
     <img src=drst.jpg
 height=”100” width=“50”
 alt=“dr. strangleove poster” >
+<hr>
+<h2>table</h2>
+<table>
+    <tr>baseball</tr>
+    <tr>basketball</tr>
+</table>
+<hr>
+<h2>coding</h2>
+<blockquote cite=“https://www.geeksforgeeks.org/string-hashing-using-polynomial-rolling-hash-function/#:~:text=What%20is%20String%2DHashing%3F,strings%20having%20the%20same%20hash).”> String hashing is the way to convert a string into an integer known as a hash of that string. </blockquote >
+<pre>long long compute_hash(string const& s) {
+    const int p = 31;
+    const int m = 1e9 + 9;
+    long long hash_value = 0;
+    long long p_pow = 1;
+    for (char c : s) {
+        hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;
+        p_pow = (p_pow * p) % m;
+    }
+    return hash_value;
+}</pre>
     </body>
 
 </html>
